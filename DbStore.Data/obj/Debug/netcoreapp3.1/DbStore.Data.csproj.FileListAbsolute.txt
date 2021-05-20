@@ -1,0 +1,12 @@
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.Data\bin\Debug\netcoreapp3.1\DbStore.Data.deps.json
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.Data\bin\Debug\netcoreapp3.1\DbStore.Data.runtimeconfig.json
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.Data\bin\Debug\netcoreapp3.1\DbStore.Data.runtimeconfig.dev.json
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.Data\bin\Debug\netcoreapp3.1\DbStore.Data.dll
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.Data\bin\Debug\netcoreapp3.1\DbStore.Data.pdb
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.Data\obj\Debug\netcoreapp3.1\DbStore.Data.csprojAssemblyReference.cache
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.Data\obj\Debug\netcoreapp3.1\DbStore.Data.AssemblyInfoInputs.cache
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.Data\obj\Debug\netcoreapp3.1\DbStore.Data.AssemblyInfo.cs
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.Data\obj\Debug\netcoreapp3.1\DbStore.Data.csproj.CoreCompileInputs.cache
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.Data\obj\Debug\netcoreapp3.1\DbStore.Data.dll
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.Data\obj\Debug\netcoreapp3.1\DbStore.Data.pdb
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.Data\obj\Debug\netcoreapp3.1\DbStore.Data.genruntimeconfig.cache
