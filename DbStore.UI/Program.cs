@@ -2,7 +2,7 @@
 
 namespace DbStore.UI
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -15,8 +15,18 @@ namespace DbStore.UI
             //AddingData.ProductData();
             //AddingData.InventoryData();
             //AddingData.SupplierData();
+            //AddingData.ProductOrderData();
+            //AddingData.SupplierProductOrderData();
             // AddingData.ProductCategoryData();
-            AddingData.ProductPriceData();
+            //AddingData.ProductPriceData();
+            // QueryData.StaffQueryNamePhoneNumber();
+            //QueryData.StaffRole();
+            //QueryData.ProductInStock();
+            // QueryData.ProductCategoryPrice();
+            //QueryData.ProductinCategory();
+            //QueryData.SuppliersData();
+            QueryData.ProductCategoryInAscending();
+
         }
     }
 }

@@ -129,6 +129,33 @@ namespace DbStore.UI
                 Console.WriteLine("DATA ADDED");
             }
         }
+        public static void ProductOrderData()
+        {
+            using (DbStoreContext context = new DbStoreContext())
+            {
+                context.productOrders.AddRange(
+                    new Data.ProductOrder { OrderTime = new DateTime(2021, 01, 11), Qunatity = 22 },
+                    new Data.ProductOrder { OrderTime = new DateTime(2021, 05, 15), Qunatity = 10 },
+                    new Data.ProductOrder { OrderTime = new DateTime(2021, 03, 17), Qunatity = 3 },
+                    new Data.ProductOrder { OrderTime = new DateTime(2020, 01, 11), Qunatity = 2 }
+                    );
+                context.SaveChanges();
+                Console.WriteLine("DATA ADDED");
+            }
+        }
+        public static void SupplierProductOrderData()
+        {
+            using (DbStoreContext context = new DbStoreContext())
+            {
+                context.supplierProductOrders.AddRange(
+                new Data.SupplierProductOrder { ProductId = 1, ProductOrderId = 2, SupplierId = 4 },
+                new Data.SupplierProductOrder { ProductId = 2, ProductOrderId = 3, SupplierId = 2 },
+                new Data.SupplierProductOrder { ProductId = 3, ProductOrderId = 2, SupplierId = 3 },
+                new Data.SupplierProductOrder { ProductId = 1, ProductOrderId = 1, SupplierId = 3 });
+                context.SaveChanges();
+                Console.WriteLine("DATA ADDED");
 
+            }
+        }
     }
 }

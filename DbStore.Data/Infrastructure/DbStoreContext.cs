@@ -16,6 +16,8 @@ namespace DbStore.Data.Infrastructure
         public DbSet<ProductCategory> productCategories { get; set; }
         public DbSet<ProductPrice> productPrices { get; set; }
         public DbSet<Supplier> suppliers { get; set; }
+        public DbSet<ProductOrder> productOrders { get; set; }
+        public DbSet<SupplierProductOrder> supplierProductOrders { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         { 
            optionsBuilder.UseNpgsql("Host=localhost;DataBase=DStore;username=postgres;password=Neetika2021");
@@ -90,6 +92,14 @@ namespace DbStore.Data.Infrastructure
             modelBuilder.Entity<Category>().HasKey(k => k.CategoryId);
             modelBuilder.Entity<Category>().Property(k => k.CategoryName).HasMaxLength(50).IsRequired();
             modelBuilder.Entity<Category>().Property(k => k.CategoryCode).HasMaxLength(4).IsRequired();
+
+            //managing the productOrderTable
+            modelBuilder.Entity<ProductOrder>().HasKey(r => r.ProductOrderId);
+            modelBuilder.Entity<ProductOrder>().Property(x => x.Qunatity).IsRequired();
+
+            //managing the SupplierProductOrderTable
+            modelBuilder.Entity<SupplierProductOrder>().HasKey(r => new { r.ProductId, r.ProductOrderId, r.SupplierId });
+
         }
     }
 }
