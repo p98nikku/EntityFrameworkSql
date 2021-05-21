@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "DbStore.UI/1.0.0": {
         "dependencies": {
+          "DbStore.Data": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.11",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.11",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.11"
@@ -251,7 +252,16 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.6.0": {}
+      "System.Runtime.CompilerServices.Unsafe/4.6.0": {},
+      "DbStore.Data/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.11",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "3.1.11"
+        },
+        "runtime": {
+          "DbStore.Data.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -441,6 +451,11 @@
       "sha512": "sha512-HxozeSlipUK7dAroTYwIcGwKDeOVpQnJlpVaOkBz7CM4TsE5b/tKlQBZecTjh6FzcSbxndYaxxpsBMz+wMJeyw==",
       "path": "system.runtime.compilerservices.unsafe/4.6.0",
       "hashPath": "system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
+    },
+    "DbStore.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

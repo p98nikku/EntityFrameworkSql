@@ -3,15 +3,17 @@ using System;
 using DbStore.Data.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace DbStore.Data.Migrations
 {
     [DbContext(typeof(DbStoreContext))]
-    partial class DbStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20210521070513_adding.new.tables")]
+    partial class addingnewtables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -86,13 +88,19 @@ namespace DbStore.Data.Migrations
             modelBuilder.Entity("DbStore.Data.Inventory", b =>
                 {
                     b.Property<int>("ProductId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<int>("ProductId1")
                         .HasColumnType("integer");
 
                     b.Property<int>("TotalQuantity")
                         .HasColumnType("integer");
 
-                    b.HasIndex("ProductId")
-                        .IsUnique();
+                    b.HasKey("ProductId");
+
+                    b.HasIndex("ProductId1");
 
                     b.ToTable("inventories");
                 });
@@ -291,7 +299,7 @@ namespace DbStore.Data.Migrations
                 {
                     b.HasOne("DbStore.Data.Product", "product")
                         .WithMany()
-                        .HasForeignKey("ProductId")
+                        .HasForeignKey("ProductId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

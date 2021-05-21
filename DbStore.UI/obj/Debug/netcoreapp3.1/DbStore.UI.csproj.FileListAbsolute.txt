@@ -33,3 +33,5 @@ C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.UI\obj\Debug\netcoreapp3
 C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.UI\obj\Debug\netcoreapp3.1\DbStore.UI.dll
 C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.UI\obj\Debug\netcoreapp3.1\DbStore.UI.pdb
 C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.UI\obj\Debug\netcoreapp3.1\DbStore.UI.genruntimeconfig.cache
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.UI\bin\Debug\netcoreapp3.1\DbStore.Data.dll
+C:\Users\S S INFOTECH\source\repos\DbStore.Data\DbStore.UI\bin\Debug\netcoreapp3.1\DbStore.Data.pdb

@@ -7,15 +7,15 @@ namespace DbStore.Data.Infrastructure
 {
     public class DbStoreContext:DbContext
     {
-        DbSet<Staff> staffs { get; set; }
-        DbSet<Role> roles { get; set; }
-        DbSet<Address> addresses { get; set; }
-        DbSet<Category> categories { get; set; }
-        DbSet<Inventory> inventories { get; set; }
-        DbSet<Product> products { get; set; }
-        DbSet<ProductCategory> productCategories { get; set; }
-        DbSet<ProductPrice> productPrices { get; set; }
-        DbSet<Supplier> suppliers { get; set; }
+        public DbSet<Staff> staffs { get; set; }
+        public DbSet<Role> roles { get; set; }
+        public DbSet<Address> addresses { get; set; }
+        public DbSet<Category> categories { get; set; }
+        public DbSet<Inventory> inventories { get; set; }
+        public DbSet<Product> products { get; set; }
+        public DbSet<ProductCategory> productCategories { get; set; }
+        public DbSet<ProductPrice> productPrices { get; set; }
+        public DbSet<Supplier> suppliers { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         { 
            optionsBuilder.UseNpgsql("Host=localhost;DataBase=DStore;username=postgres;password=Neetika2021");
@@ -33,6 +33,7 @@ namespace DbStore.Data.Infrastructure
             modelBuilder.Entity<Staff>().Property(r => r.RoleId).IsRequired();
             modelBuilder.Entity<Staff>().Property(r => r.Salary).IsRequired();
 
+
             //managing the address table
             modelBuilder.Entity<Address>().HasKey(k => k.AddressId);
             modelBuilder.Entity<Address>().Property(r => r.AddressLine1).HasMaxLength(128).IsRequired().IsFixedLength();
@@ -47,18 +48,48 @@ namespace DbStore.Data.Infrastructure
             modelBuilder.Entity<Role>().Property(r => r.Rolename).HasMaxLength(50).IsRequired().IsFixedLength();
             modelBuilder.Entity<Role>().Property(r => r.Description).HasMaxLength(128).IsRequired().IsFixedLength();
 
+
             //managing the inventory table
-            modelBuilder.Entity<Inventory>().HasKey(k => k.ProductId);
+            modelBuilder.Entity<Inventory>().HasNoKey();
+            modelBuilder.Entity<Inventory>().HasIndex(r => r.ProductId).IsUnique();
+            modelBuilder.Entity<Inventory>().Property(k => k.TotalQuantity);
+
+
             //managing the productcategory table
-            modelBuilder.Entity<ProductCategory>().HasKey(k => new { k.ProductId , k.CategoryId});
+            modelBuilder.Entity<ProductCategory>().HasKey(k => new { k.ProductId, k.CategoryId });
+
+
             //managing the product price table
             modelBuilder.Entity<ProductPrice>().HasKey(k => k.ProductPriceId);
+            modelBuilder.Entity<ProductPrice>().Property(k => k.ProductId).IsRequired();
+            modelBuilder.Entity<ProductPrice>().Property(k => k.CostPrice).IsRequired();
+            modelBuilder.Entity<ProductPrice>().Property(k => k.SellingPrice).IsRequired();
+            modelBuilder.Entity<ProductPrice>().Property(k => k.Month).IsRequired();
+            modelBuilder.Entity<ProductPrice>().Property(k => k.IsActive).IsRequired();
+
+
             //managing the supplier table
             modelBuilder.Entity<Supplier>().HasKey(k => k.SupplierId);
+            modelBuilder.Entity<Supplier>().Property(k => k.SupplierName).HasMaxLength(128).IsRequired();
+            modelBuilder.Entity<Supplier>().Property(k => k.SupplierAge).HasMaxLength(128).IsRequired();
+            modelBuilder.Entity<Supplier>().Property(k => k.SupplierEmail).HasMaxLength(128).IsRequired();
+            modelBuilder.Entity<Supplier>().Property(k=>k.SupplierPhonenumber).HasMaxLength(10).IsRequired().IsFixedLength();
+            modelBuilder.Entity<Supplier>().Property(k => k.SupplierGender).HasMaxLength(10).IsRequired();
+
+
             //managing the product table
             modelBuilder.Entity<Product>().HasKey(k => k.ProductId);
+            modelBuilder.Entity<Product>().Property(k=>k.ProductName).HasMaxLength(128).IsRequired();
+            modelBuilder.Entity<Product>().Property(k => k.ProductInStock).HasMaxLength(50);
+            modelBuilder.Entity<Product>().Property(k => k.Manufacturer).HasMaxLength(128).IsRequired();
+            modelBuilder.Entity<Product>().Property(k => k.ProductCode).HasMaxLength(4).IsRequired();
+            modelBuilder.Entity<Product>().Property(k => k.CategoryId).IsRequired();
+
+
             //managing the category table
             modelBuilder.Entity<Category>().HasKey(k => k.CategoryId);
+            modelBuilder.Entity<Category>().Property(k => k.CategoryName).HasMaxLength(50).IsRequired();
+            modelBuilder.Entity<Category>().Property(k => k.CategoryCode).HasMaxLength(4).IsRequired();
         }
     }
 }
