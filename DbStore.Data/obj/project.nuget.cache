@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "wcWvhLllZpAPJxTHCIOC5T8b57ty7vavf/t9/WrmKw4N+gs3gek4R6gpYfev5h+biaCWu1rrs6Rg7YHfjk0PBQ==",
+  "dgSpecHash": "eUyf7oyrgkBeBzmiLNn4WfH4hjiUgbx0hsRWPm+JtgHdn/pD97SXk1JJRatYUwi8l3yx6DPbCT3wFQFGsN88CA==",
   "success": true,
   "projectFilePath": "C:\\Users\\S S INFOTECH\\source\\repos\\DbStore.Data\\DbStore.Data\\DbStore.Data.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\S S INFOTECH\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\S S INFOTECH\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\S S INFOTECH\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\S S INFOTECH\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\S S INFOTECH\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -29,6 +31,7 @@
     "C:\\Users\\S S INFOTECH\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\S S INFOTECH\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
     "C:\\Users\\S S INFOTECH\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\S S INFOTECH\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\S S INFOTECH\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []

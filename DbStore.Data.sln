@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbStore.Data", "DbStore.Data\DbStore.Data.csproj", "{681D95F8-C42E-44D3-BDFF-F9FCE2AA3F30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbStore.Data", "DbStore.Data\DbStore.Data.csproj", "{681D95F8-C42E-44D3-BDFF-F9FCE2AA3F30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbStore.UI", "DbStore.UI\DbStore.UI.csproj", "{8FBD8119-5B6E-4777-9B4E-1A6A34B91FF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DbStore.UI", "DbStore.UI\DbStore.UI.csproj", "{8FBD8119-5B6E-4777-9B4E-1A6A34B91FF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbStoreAPI", "DbStoreAPI\DbStoreAPI.csproj", "{EA8C1194-DDEA-4A2D-B39C-751756601420}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8FBD8119-5B6E-4777-9B4E-1A6A34B91FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FBD8119-5B6E-4777-9B4E-1A6A34B91FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FBD8119-5B6E-4777-9B4E-1A6A34B91FF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA8C1194-DDEA-4A2D-B39C-751756601420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA8C1194-DDEA-4A2D-B39C-751756601420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA8C1194-DDEA-4A2D-B39C-751756601420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA8C1194-DDEA-4A2D-B39C-751756601420}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
